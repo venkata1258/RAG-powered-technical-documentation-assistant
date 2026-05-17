@@ -138,12 +138,5 @@ https://docs.langchain.com/
 
 ---
 
-📌 Status
-
-✔ Working FastAPI application
-✔ LangGraph RAG pipeline implemented
-✔ Retrieval + grading + routing working
-✔ Ready for submission
-
 
 
