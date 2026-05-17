@@ -48,11 +48,14 @@ Create a `.env` file in the project root and add your Google Gemini API key:
 ```env
 GEMINI_API_KEY=your_google_api_key_here
 
+
 ## 4.Run the FastAPI server:
 uvicorn app:app --reload
 
 ## 5.Open the API documentation:
 http://127.0.0.1:8000/docs
+
+---
 
 ## 📌 API Endpoints
 1. Ingest Documents
@@ -66,6 +69,7 @@ JSON
   "url": "https://docs.langchain.com/"
 }
 
+---
 
 2. Query System
 http
@@ -77,10 +81,14 @@ JSON
   "question": "What is LangChain?"
 }
 
+---
+
 3. View Stored Documents
 
 http
 GET /documents
+
+---
 
 4. Submit Feedback
 
@@ -94,6 +102,8 @@ JSON
   "feedback": "good"
 }
 
+---
+
 📌 Design Decisions
 Used LangGraph to structure the RAG workflow as a state machine
 Used ChromaDB for local vector storage and fast similarity search
@@ -101,21 +111,33 @@ Used Gemini LLM for both embeddings and generation
 Added query rewriting to improve retrieval accuracy
 Added document grading to filter irrelevant chunks
 Added retry mechanism for better robustness
+
+---
+
 📌 Tradeoffs
 Web scraping may fail for some restricted websites
 LLM-based grading increases response latency
 Local ChromaDB is not scalable for production workloads
+
+---
+
 📌 Future Improvements
 Add streaming responses
 Add conversation memory (chat history)
 Add web search fallback for missing knowledge
 Deploy project on cloud (Render / AWS / Railway)
 Improve evaluation using Self-RAG style scoring
+
+---
+
 📌 Document Corpus
 
 Used:
 
 https://docs.langchain.com/
+
+---
+
 📌 Status
 
 ✔ Working FastAPI application
