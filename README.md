@@ -121,15 +121,6 @@ Local ChromaDB is not scalable for production workloads
 
 ---
 
-📌 Future Improvements
-Add streaming responses
-Add conversation memory (chat history)
-Add web search fallback for missing knowledge
-Deploy project on cloud (Render / AWS / Railway)
-Improve evaluation using Self-RAG style scoring
-
----
-
 📌 Document Corpus
 
 Used:
